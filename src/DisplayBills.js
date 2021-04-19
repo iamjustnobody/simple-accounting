@@ -48,6 +48,8 @@ export const DisplayBills =(props) => {
     }
     const {handlecountedC1}=props;
 //both onClick={()=>{handlecountedC1(bill)}} and  onClick={()=>{handleCounted3(bill)}} ARE OK
+    //handleCounted3+sort==handlecountedC1+sort==handleCounted2==handlecountedB1
+
 /*
     return (
         <div>
@@ -67,7 +69,7 @@ export const DisplayBills =(props) => {
                     return (
                         <div key={index} className='bill-list-row'>
                             <input type="checkbox" value={bill.counted} checked={bill.counted}
-                                   onClick={()=>{handleCounted3(bill)}}
+                                   onClick={()=>{handlecountedB1(bill)}}
                                    className='form-check-input'></input>
                             <div className='bill-list-row-content'>
                                 {bill.item} costs {bill.monthlycost}
