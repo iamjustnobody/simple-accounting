@@ -8,7 +8,7 @@ export const TotalCosts =(props) => {
         },0
     );
     const totaluncounted=allbills3.reduce(
-        ((arr,each) => each.counted?(arr+Number.parseFloat(each.monthlycost)):arr),0
+        ((arr,each) => !each.counted?(arr+Number.parseFloat(each.monthlycost)):arr),0
     );
     const moneytransform=(totals)=>{
         switch(timescale1) {
